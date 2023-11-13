@@ -1,0 +1,19 @@
+<div (click)="onClickWindow()">
+  <shared-navbar></shared-navbar>
+
+  <div class="container-fluid">
+    <div class="row">
+      <shared-sidebar
+        class="sidebar border col-md-3 col-lg-2 p-0 bg-body-tertiary"
+      ></shared-sidebar>
+
+      <gifs-home-page
+        class="col-md-9 ms-sm-auto col-lg-10 px-md-4"
+      ></gifs-home-page>
+    </div>
+  </div>
+</div>
+
+<shared-error-toast></shared-error-toast>
+
+<shared-theme-fab></shared-theme-fab>

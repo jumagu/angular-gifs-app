@@ -1,0 +1,28 @@
+.delete-icon {
+  margin-left: 15px;
+  color: #dc3545;
+  transition-property: trasform color;
+  transition-duration: 0.3s;
+}
+
+.delete-icon:hover {
+  transform: scale(1.1);
+  color: #bb2d3b;
+  cursor: default;
+}
+
+.no-tags {
+  height: calc(100vh - 78px);
+}
+
+@media (min-width: 768px) {
+  .no-tags {
+    height: calc(100vh - 54px);
+  }
+}
+
+.tag-text {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

@@ -1,0 +1,5 @@
+<gifs-card-list [gifs]="gifs"></gifs-card-list>
+
+<div class="no-searches-gif-container" *ngIf="gifs.length === 0">
+  <img src="assets/no-searches.gif" alt="No Searches Gif" />
+</div>

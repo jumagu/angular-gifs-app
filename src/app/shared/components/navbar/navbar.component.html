@@ -1,0 +1,42 @@
+<header
+  class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow"
+  data-bs-theme="dark"
+>
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white"
+    >Gifs App</a
+  >
+
+  <ul class="navbar-nav flex-row d-md-none">
+    <li class="nav-item text-nowrap">
+      <button
+        class="nav-link px-3 text-white"
+        type="button"
+        aria-label="Toggle search"
+        (click)="toggleSearchBarVisivility()"
+      >
+        <i class="bi bi-search"></i>
+      </button>
+    </li>
+    <li class="nav-item text-nowrap">
+      <button
+        class="nav-link px-3 text-white"
+        type="button"
+        aria-label="Toggle navigation"
+        (click)="onOpenSideBar()"
+      >
+        <i class="bi bi-list"></i>
+      </button>
+    </li>
+  </ul>
+
+  <div id="navbarSearch" class="navbar-search w-100 d-md-block collapse">
+    <input
+      #txtTagInput
+      class="form-control w-100 rounded-0 border-0"
+      type="text"
+      placeholder="Search for a gif..."
+      aria-label="Search"
+      (keyup.enter)="searchTag()"
+    />
+  </div>
+</header>

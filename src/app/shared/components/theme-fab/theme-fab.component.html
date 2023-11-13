@@ -1,0 +1,50 @@
+<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+  <button
+    id="fab-theme"
+    type="button"
+    style="height: 42px"
+    class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center {{
+      btn
+    }}"
+    (click)="toggleDropdownMenu()"
+  >
+    <i class="bi my-1 {{ themeIcon }}"></i>
+  </button>
+  <ul
+    id="dropdown-theme"
+    class="dropdown-menu dropdown-menu-end shadow {{ dropdown }}"
+    style="
+      position: absolute;
+      inset: auto 0px 0px auto;
+      margin: 0px;
+      transform: translate(0px, -44px);
+    "
+  >
+    <li>
+      <button
+        #btnLight
+        value="light"
+        type="button"
+        class="dropdown-item d-flex align-items-center {{ lightOption }}"
+        (click)="onSelectTheme(btnLight.value)"
+      >
+        <i class="bi bi-sun-fill opacity-50 me-2"></i>
+        Light
+        <i class="bi bi-check2 ms-auto {{ lightCheck }}"></i>
+      </button>
+    </li>
+    <li>
+      <button
+        #btnDark
+        value="dark"
+        type="button"
+        class="dropdown-item d-flex align-items-center {{ darkOption }}"
+        (click)="onSelectTheme(btnDark.value)"
+      >
+        <i class="bi bi-moon-stars-fill opacity-50 me-2"></i>
+        Dark
+        <i class="bi bi-check2 ms-auto {{ darkCheck }}"></i>
+      </button>
+    </li>
+  </ul>
+</div>
